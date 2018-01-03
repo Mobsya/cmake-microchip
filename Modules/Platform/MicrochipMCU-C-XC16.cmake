@@ -109,6 +109,7 @@ _xc16_get_version()
 # set the default C standard manually
 # this is required by `Compiler/Gnu-C`
 set(CMAKE_C_STANDARD_COMPUTED_DEFAULT 90)
+include_directories("${MICROCHIP_XC16_PATH}/${MICROCHIP_MCU_FAMILY}/h")
 
 
 add_compile_options(
