@@ -110,12 +110,3 @@ _xc16_get_version()
 # this is required by `Compiler/Gnu-C`
 set(CMAKE_C_STANDARD_COMPUTED_DEFAULT 90)
 include_directories("${MICROCHIP_XC16_PATH}/${MICROCHIP_MCU_FAMILY}/h")
-
-
-add_compile_options(
-    "-mcpu=${MICROCHIP_MCU_MODEL}"
-)
-string(APPEND CMAKE_C_LINK_FLAGS
-    " -mcpu=${MICROCHIP_MCU_MODEL}"
-    " -Wl,--script,p${MICROCHIP_MCU_MODEL}.gld"
-)
